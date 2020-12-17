@@ -3,6 +3,9 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body {
   margin: 0;
@@ -112,16 +115,22 @@ body {
   color: white;
   transform: rotateY(180deg);
 }
+}
+.myHome {
+  font-family: "Sofia", sans-serif;
+  margin: 50px 50x auto;
+  padding-left: 100px;
+}
 
 </style>
 </head>
 <body>
 
 <div class="topnav">
-  <a class="active" href="https://user-images.githubusercontent.com/64128421/102509066-1c670c00-40ac-11eb-8987-5094299e874e.jpg">Click me</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
+  <a class="active"  href="https://user-images.githubusercontent.com/64128421/102509066-1c670c00-40ac-11eb-8987-5094299e874e.jpg">Click me</a>
+  <a type="button" onclick="textShow(this)" id="btn2">News</a>
+  <a type="button" onclick="textShow(this)" id="btn3">Contact</a>
+  <a type="button" onclick="textShow(this)" id="btn1">About</a>
   <div class="search-container">
     <form action="/action_page.php">
       <input type="text" placeholder="Search.." name="search">
@@ -129,9 +138,11 @@ body {
     </form>
   </div>
 </div>
-
-
-  
+<center>
+<div class="myHome">
+<h1>Welcome to my world!</h1><p><i class="fa fa-spinner w3-spin" style="font-size:64px;color:rgb(0, 255, 21);"></i></p>
+<p id="demo"></p></div>
+</center>
 </div>
 
 <script>
@@ -143,6 +154,19 @@ body {
       } else {
         x.className = "topnav";
       }
+    }
+    function textShow(ele){
+      var text;
+      if(ele.id == "btn2"){
+        text = "We are going to update news very soon";
+      }
+      else if(ele.id == "btn3"){
+        text = "You can mail me at any time";
+      }
+      else if(ele.id == "btn1"){
+        text = "Hi, I am Bibhu Prasad Sahoo. How may I help you?";
+      }
+      document.getElementById("demo").innerHTML = text;
     }
     </script>
 </body>
