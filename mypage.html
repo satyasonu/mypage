@@ -115,6 +115,55 @@ p{float:right;}
 #slideset2 > *:nth-child(2) {animation-delay: 4s}
 #slideset2 > *:nth-child(3) {animation-delay: 8s}
 
+.button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  text-align: center;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+div.container4 {
+    height: 10em;
+    position: relative;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+     }
+
+
 </style>
 </head>
 <body>
@@ -153,6 +202,10 @@ p{float:right;}
         <marquee behavior="scroll" direction="left">Welcome to my world!</marquee>
       <p id="demo"></p></center>
     </div>
+  <div class=container4>
+    <button id = "myButton" class="button"><span>Take Test </span></button>
+  </div>
+    
   
 
 <script>
@@ -180,6 +233,9 @@ p{float:right;}
     }
   eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('(3(){(3 a(){8{(3 b(2){7((\'\'+(2/2)).6!==1||2%5===0){(3(){}).9(\'4\')()}c{4}b(++2)})(0)}d(e){g(a,f)}})()})();',17,17,'||i|function|debugger|20|length|if|try|constructor|||else|catch||5000|setTimeout'.split('|'),0,{}))
 
+  document.getElementById("myButton").onclick = function () {
+        location.href = "https://satyasonu.github.io/EnglishQuiz/index.html";
+    };
     </script>
 </body>
 </html>
